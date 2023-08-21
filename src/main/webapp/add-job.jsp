@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
+    <title>Add Jobs</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css">
@@ -86,7 +86,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseVehicleCat">
             <li>
-              <a href="">Add Jobs</a>
+              <a href="add-job.jsp">Add Jobs</a>
             </li>
             <li>
               <a href="">Update Jobs</a>
@@ -130,56 +130,36 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Add Employees</li>
+        <li class="breadcrumb-item active">Add Job Types</li>
       </ol>
 
 
       <div class="row justify-content-center">
         <div class="col-md-8">
-             <form action="employee?type=add" method="post">
+             <form action="job?type=add" method="post">
 
               <div class="form-group">
-                <input type="text" name="employee_id" id="employee_id" class="form-control" placeholder="Employee ID">
-              </div>
-              
-             <div class="form-group">
-                <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Full Name">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="nic" id="nic" class="form-control" placeholder="National ID Card No">
+                <input type="text" name="job_type_specialization_id" id="job_type_specialization_id" class="form-control" placeholder="Job Type Code">
               </div>
 
               <div class="form-group">
-                <input type="text" name="user_type" id="user_type" class="form-control"  placeholder="Type of the User">
+                <input type="text" name="job_type_name" id="job_type_name" class="form-control" placeholder="Job Type Name">
+              </div>
+
+              <div class="form-group">
+                <input type="text" name="country_specialization_id" id="country_specialization_id" class="form-control"  placeholder="Country Code">
+              </div>
+
+              <div class="form-group">
+                <input type="text" name="employee_id" id="employee_id" class="form-control"  placeholder="Consultanat ID">
               </div>
               
               <div class="form-group">
-                <input type="text" name="address" id="address" class="form-control"  placeholder="Address">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="contact_no" id="contact_no" class="form-control"  placeholder="Contact No">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="email" id="email" class="form-control"  placeholder="Email">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="password" id="password" class="form-control"  placeholder="Password">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="dob" id="dob" class="form-control"  placeholder="Date of Birth">
-              </div>
-              
-       		  <div class="form-group">
-                <input type="text" name="country_specialization_id" id="country_specialization_id" class="form-control"  placeholder="Specialized Country">
+                <input type="text" name="employee_id" id="employee_id" class="form-control"  placeholder="Consultanat Name">
               </div>
               
                 <div class="row justify-content-center">
-                       <button type="submit" class="btn btn-primary">Add Employee</button>
+                       <button type="submit" class="btn btn-primary">Add Job Type</button>
                 </div>
             </form>
         </div>
