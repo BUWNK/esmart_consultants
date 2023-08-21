@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
+    <title>Delete Country</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css">
@@ -34,7 +34,7 @@
           </a>
         </li>
   
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Country">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProducts" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-globe"></i>
             <span class="nav-link-text">Country</span>
@@ -61,7 +61,7 @@
             <span class="nav-link-text">Consultants</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseVehicle">
-            <li>
+             <li>
               <a href="add-employee.jsp">Add Consultants</a>
             </li>
             <li>
@@ -78,7 +78,8 @@
             </li>
           </ul>
         </li>
-       
+
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseVehicleCat" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-briefcase"></i>
@@ -99,7 +100,7 @@
             </li>
           </ul>
         </li>
-
+        
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Appointments">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Appointments" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-check-square-o"></i>
@@ -111,7 +112,7 @@
             </li>
           </ul>
         </li>
-        
+
       </ul>
     
       <ul class="navbar-nav ml-auto">
@@ -130,56 +131,32 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Add Employees</li>
+        <li class="breadcrumb-item active">Delete Countries</li>
       </ol>
 
 
       <div class="row justify-content-center">
         <div class="col-md-8">
-             <form action="employee?type=add" method="post">
+             <form action="Contry?type=delete" method="post">
 
               <div class="form-group">
-                <input type="text" name="employee_id" id="employee_id" class="form-control" placeholder="Employee ID">
-              </div>
-              
-             <div class="form-group">
-                <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Full Name">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="nic" id="nic" class="form-control" placeholder="National ID Card No">
+                <input type="text" name="countryCode" id="countryCode" class="form-control" placeholder="country Code">
               </div>
 
               <div class="form-group">
-                <input type="text" name="user_type" id="user_type" class="form-control"  placeholder="Type of the User">
+                <input type="text" name="countryName" id="countryName" class="form-control" placeholder="country Name">
               </div>
-              
+
               <div class="form-group">
-                <input type="text" name="address" id="address" class="form-control"  placeholder="Address">
+                <input type="text" name="continent" id="continent" class="form-control"  placeholder="continent">
               </div>
-              
+
               <div class="form-group">
-                <input type="text" name="contact_no" id="contact_no" class="form-control"  placeholder="Contact No">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="email" id="email" class="form-control"  placeholder="Email">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="password" id="password" class="form-control"  placeholder="Password">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="dob" id="dob" class="form-control"  placeholder="Date of Birth">
-              </div>
-              
-       		  <div class="form-group">
-                <input type="text" name="country_specialization_id" id="country_specialization_id" class="form-control"  placeholder="Specialized Country">
+                <input type="text" name="discription" id="discription" class="form-control"  placeholder="Discription">
               </div>
               
                 <div class="row justify-content-center">
-                       <button type="submit" class="btn btn-primary">Add Employee</button>
+                       <button type="submit" class="btn btn-danger">Delete Country</button>
                 </div>
             </form>
         </div>

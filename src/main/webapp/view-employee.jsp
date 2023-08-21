@@ -1,24 +1,19 @@
-<!-- 
-
-<  %@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
-
- -->
- 
-<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="tag" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
+    <title> View Employees</title>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
-    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+ <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Dashboard</a>
@@ -34,23 +29,23 @@
           </a>
         </li>
   
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Country">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseProducts" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-globe"></i>
-            <span class="nav-link-text">Country</span>
+            <span class="nav-link-text">Countries</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseProducts">
             <li>
-              <a href="add-country.jsp">Add Country</a>
+              <a href="add-country.jsp">Add Countries</a>
             </li>
             <li>
-              <a href="update-country.jsp" >Update Country</a>
+              <a href="update-country.jsp" >Update Countries</a>
             </li>
             <li>
-              <a href="delete-country.jsp">Delete Country</a>
+              <a href="delete-country.jsp">Delete Countries</a>
             </li>
             <li>
-              <a href="/smartconsultants-online/Contry">View Country</a>
+              <a href="/smartconsultants-online/Contry">View Countries</a>
             </li>
           </ul>
         </li>
@@ -61,9 +56,9 @@
             <span class="nav-link-text">Consultants</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseVehicle">
-            <li>
-              <a href="add-employee.jsp">Add Consultants</a>
-            </li>
+         	<li>
+           	  <a href="add-employee.jsp">Add Consultants</a>
+          	</li>
             <li>
               <a href="update-employee.jsp">Update Consultants</a>
             </li>
@@ -78,7 +73,8 @@
             </li>
           </ul>
         </li>
-       
+
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Products">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseVehicleCat" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-briefcase"></i>
@@ -111,7 +107,6 @@
             </li>
           </ul>
         </li>
-        
       </ul>
     
       <ul class="navbar-nav ml-auto">
@@ -130,61 +125,52 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Add Employees</li>
+        <li class="breadcrumb-item active">View Employees</li>
       </ol>
-
 
       <div class="row justify-content-center">
         <div class="col-md-8">
-             <form action="employee?type=add" method="post">
-
-              <div class="form-group">
-                <input type="text" name="employee_id" id="employee_id" class="form-control" placeholder="Employee ID">
-              </div>
-              
-             <div class="form-group">
-                <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Full Name">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="nic" id="nic" class="form-control" placeholder="National ID Card No">
-              </div>
-
-              <div class="form-group">
-                <input type="text" name="user_type" id="user_type" class="form-control"  placeholder="Type of the User">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="address" id="address" class="form-control"  placeholder="Address">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="contact_no" id="contact_no" class="form-control"  placeholder="Contact No">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="email" id="email" class="form-control"  placeholder="Email">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="password" id="password" class="form-control"  placeholder="Password">
-              </div>
-              
-              <div class="form-group">
-                <input type="text" name="dob" id="dob" class="form-control"  placeholder="Date of Birth">
-              </div>
-              
-       		  <div class="form-group">
-                <input type="text" name="country_specialization_id" id="country_specialization_id" class="form-control"  placeholder="Specialized Country">
-              </div>
-              
-                <div class="row justify-content-center">
-                       <button type="submit" class="btn btn-primary">Add Employee</button>
-                </div>
-            </form>
+   			<div class="container">
+				<table class="table table-striped">
+				  <thead>
+				    <tr class="table-dark">
+				      <th scope="col">Employee ID</th>
+				      <th scope="col">Full Name</th>
+				      <th scope="col">NIC</th>
+				      <th scope="col">User Type</th>
+				      <th scope="col">Address</th>
+				      <th scope="col">Contact No</th>
+				      <th scope="col">Email</th>
+				      <th scope="col">DOB</th>
+				      <th scope="col">Specialised Country</th>
+				      <th scope="col">Delete</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<tag:forEach var="emp" items="${empList}">
+					    <tr>
+					      <td>${emp.employee_id}</td>
+					      <td>${emp.full_name}</td>
+						  <td>${emp.nic}</td>
+						  <td>${emp.user_type}</td>
+						  <td>${emp.address}</td>
+						  <td>${emp.contact_no}</td>
+						  <td>${emp.email}</td>
+						  <td>${emp.dob}</td>
+						  <td>${emp.country_specialization_id}</td>
+					      <td>
+					      	<form action="employee?type=delete" method="post">
+					      		<button type="submit" class="btn btn-danger">Delete</button>
+					      		<input type="hidden" name="employee_id" id="employee_id" value="${emp.employee_id}">
+					      	</form>
+						  </td>
+					    </tr>
+				    </tag:forEach>
+				  </tbody>
+				</table>
+			</div>	
         </div>
       </div>
-
 
     </div>
     <!-- /.container-fluid-->
@@ -207,7 +193,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">�</span>
             </button>
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
