@@ -20,7 +20,7 @@ import com.codewithbuwaneka.service.JobSpecializationService;
 public class JobSpecializationController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
-private String message;
+	private String message;
     
 	private JobSpecializationService jobSpecializationService;
 	
@@ -61,7 +61,7 @@ private String message;
 	}
 	
 	
-	private void insertJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void insertJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 				
 		String job_type_specialization_id = request.getParameter("job_type_specialization_id");		
@@ -92,7 +92,7 @@ private String message;
 	}
 	
 	
-	private void updateJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void updateJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
 		String job_type_specialization_id = request.getParameter("job_type_specialization_id");		
@@ -122,7 +122,7 @@ private String message;
 		rd.forward(request, response);
 	}
 	
-	private void deleteJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void deleteJobs(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String job_type_specialization_id = request.getParameter("job_type_specialization_id");
 		

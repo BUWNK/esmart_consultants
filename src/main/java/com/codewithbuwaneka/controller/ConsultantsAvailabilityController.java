@@ -67,10 +67,6 @@ public class ConsultantsAvailabilityController extends HttpServlet {
 		}
 		request.setAttribute("consultantsAvailabilityList", consultantsAvailabilityList);
 		
-		System.out.println("This is consultantsAvailabilityList" + consultantsAvailabilityList);
-		
-		System.out.println("This is consultantsAvailabilityList:");
-		
 		for (ConsultantsAvailability availability : consultantsAvailabilityList) {
 		    System.out.println("ConsultantsAvailability --- "+ availability);
 		}

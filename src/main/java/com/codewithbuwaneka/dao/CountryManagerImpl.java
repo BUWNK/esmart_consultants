@@ -28,7 +28,6 @@ public class CountryManagerImpl implements CountryManager {
 		return 0;
 	}
 
-
 	public boolean addCountry(CountrySpecialization countrySpecialization) throws ClassNotFoundException, SQLException {
 		
 		Connection connection = getconnection();

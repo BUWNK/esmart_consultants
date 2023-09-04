@@ -127,7 +127,18 @@
         </li>
         <li class="breadcrumb-item active">View Job Types</li>
       </ol>
-
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+   			<div class="container">
+				<div class="input-group mb-3">
+				  <input type="text" class="form-control" placeholder="Job ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
+				  <div class="input-group-append">
+				    <button class="btn btn-outline-secondary" type="button">Search</button>
+				  </div>
+				</div>
+   			 </div>
+		</div>
+   	  </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
    			<div class="container">
