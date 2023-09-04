@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/webapp/assign-appontmnet.jsp=UTF-8
+encoding//src/main/webapp/consultant-dashboard.jsp=UTF-8
 encoding//src/main/webapp/view-ConsultantsAvailability.jsp=UTF-8
+encoding//src/main/webapp/view-appointment.jsp=UTF-8
 encoding//src/main/webapp/view-countries.jsp=UTF-8
 encoding//src/main/webapp/view-employee.jsp=UTF-8
 encoding//src/main/webapp/view-jobs.jsp=UTF-8

@@ -19,7 +19,7 @@ public class ContryController extends HttpServlet {
        
 	private String message;
     
-	private CountryService countryService;
+	CountryService countryService;
 	
     public ContryController() {
     	countryService = CountryService.getCountryServiceInstance();
@@ -62,7 +62,7 @@ public class ContryController extends HttpServlet {
 	}
 	
 	
-	private void insertCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void insertCountry(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 				
 		String country_id = request.getParameter("countryCode");		

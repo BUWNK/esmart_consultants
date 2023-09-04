@@ -65,7 +65,7 @@ public class EmployeeController extends HttpServlet {
 		
 	}
 	
-	private void insertEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void insertEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String employee_id  = request.getParameter("employee_id");  
 		String full_name = request.getParameter("full_name");
@@ -113,7 +113,7 @@ public class EmployeeController extends HttpServlet {
 		
 	}
 	
-	private void updateEmployee (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void updateEmployee (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String employee_id  = request.getParameter("employee_id");  
 		String full_name = request.getParameter("full_name");
